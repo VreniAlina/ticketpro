@@ -1,0 +1,36 @@
+.table-container{
+    margin:auto;
+    max-width: 1440px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .table-auto{
+        margin-top: $space-lg;
+    }
+    thead{
+        background-color: #f5f5f5;
+        th{
+            padding: 12px;
+            font-weight: 600;
+            color: #333;
+        }
+    }
+    .border{
+        border: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding: $space-sm-1;
+        text-align: center;
+    }
+    .link-view-all{
+        display: inline-block;
+        margin-top: $space-lg;
+        color: #3D85F8;
+        text-decoration: none;
+        font-weight: $font-weight-bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.sidebar{
+    background-color: $color-sidebar;
+    color: white;
+    width: 19vh;
+    height: calc(100vh - 3.0rem);
+    padding: $space-lg;
+    gap: $space-xl-2;
+
+    .logo{
+        width: 100%;
+        height: auto;
+    }
+}
+.menu-options{
+    list-style-type: none;
+    padding: 0;
+    gap: 30px;
+    .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 16px;
+
+    border-radius: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: all .3s ease;
+    }
+
+    .link:hover {
+    background-color: rgba(59,130,246,.15);
+    }
+
+    .active-link {
+    background-color: #3B82F6;
+    }
+
+    .active-link svg {
+    color: white;
+    }
+}
+.login-container {
+  width: 100%;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.user-info {
+  padding: 12px;
+  border-radius: 12px;
+  gap: 5px;
+  transition: background .3s ease;
+}
+
+.user-info:hover {
+  background-color: rgba(255,255,255,.05);
+}
+
+.arrow {
+  transition: transform .3s ease;
+}
+
+.rotate-arrow {
+  transform: rotate(90deg);
+}
+
+.user-menu {
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 10px;
+
+  border-radius: 12px;
+
+  background-color: rgba(255,255,255,.05);
+}
+
+.user-menu p {
+  padding: 8px;
+  border-radius: 8px;
+
+  transition: background .3s ease;
+}
+
+.user-menu p:hover {
+  background-color: rgba(255,255,255,.08);
+}
+.user-info{
+  div{
+    gap: 10px;
+    .user-details{
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      .user-name{
+        font-weight: 600;
+      }
+    }
+  }
+}

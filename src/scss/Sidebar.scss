@@ -1,21 +1,25 @@
-.sidebar{
-    background-color: $color-sidebar;
-    color: white;
-    width: 19vh;
-    height: calc(100vh - 3.0rem);
-    padding: $space-lg;
-    gap: $space-xl-2;
+.sidebar {
+  background-color: $color-sidebar;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: calc(100vh - 0rem);
+  width: 200px;
+  padding: $space-md $space-xs-1;
+  gap: $space-xl-2;
+  z-index: 40;
 
-    .logo{
-        width: 100%;
-        height: auto;
-    }
+  .logo {
+    width: auto;
+    height: 40px;
+  }
 }
-.menu-options{
-    list-style-type: none;
-    padding: 0;
-    gap: 30px;
-    .link {
+.menu-options {
+  list-style-type: none;
+  padding: 0;
+  gap: 30px;
+  .link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -27,20 +31,20 @@
     color: white;
     text-decoration: none;
 
-    transition: all .3s ease;
-    }
+    transition: all 0.3s ease;
+  }
 
-    .link:hover {
-    background-color: rgba(59,130,246,.15);
-    }
+  .link:hover {
+    background-color: rgba(59, 130, 246, 0.15);
+  }
 
-    .active-link {
-    background-color: #3B82F6;
-    }
+  .active-link {
+    background-color: #3b82f6;
+  }
 
-    .active-link svg {
+  .active-link svg {
     color: white;
-    }
+  }
 }
 .login-container {
   width: 100%;
@@ -52,15 +56,15 @@
   padding: 12px;
   border-radius: 12px;
   gap: 5px;
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
 
 .user-info:hover {
-  background-color: rgba(255,255,255,.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .arrow {
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
 .rotate-arrow {
@@ -78,28 +82,28 @@
 
   border-radius: 12px;
 
-  background-color: rgba(255,255,255,.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .user-menu p {
   padding: 8px;
   border-radius: 8px;
 
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
 
 .user-menu p:hover {
-  background-color: rgba(255,255,255,.08);
+  background-color: rgba(255, 255, 255, 0.08);
 }
-.user-info{
-  div{
+.user-info {
+  div {
     gap: 10px;
-    .user-details{
+    .user-details {
       display: flex;
       flex-direction: column;
       gap: 4px;
 
-      .user-name{
+      .user-name {
         font-weight: 600;
       }
     }

@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Sidebar from "@/components/layout/Sidebar";
 import Menu from "@/components/ui/menu/Menu";
 import type { ReactNode } from "react";
@@ -8,13 +11,17 @@ type DashboardLayoutProps = {
 };
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => setIsSidebarOpen((s) => !s);
+
   return (
     <div className="dashboard-layout">
-      <Sidebar />
+      <Sidebar isSidebarOpen={isSidebarOpen} />
 
       <main className="flex flex-col w-full">
         <header>
-          <Menu />
+          <Menu onToggleSidebar={toggleSidebar} />
         </header>
 
         <div className="dashboard-content">{children}</div>

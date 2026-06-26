@@ -60,7 +60,7 @@ export default function Sidebar({ isSidebarOpen = true }: { isSidebarOpen?: bool
               placement="right"
               arrow
             >
-              <Link className={getLinkClassName("/")} href="/">
+              <Link className={getLinkClassName(routes.dashboard)} href={routes.dashboard}>
                 <HomeOutlinedIcon />
                 <span className="link-text">Dashboard</span>
               </Link>
@@ -72,7 +72,7 @@ export default function Sidebar({ isSidebarOpen = true }: { isSidebarOpen?: bool
               placement="right"
               arrow
             >
-              <Link className={getLinkClassName("/tickets")} href="/tickets">
+              <Link className={getLinkClassName(routes.tickets)} href={routes.tickets}>
                 <LocalActivityOutlinedIcon /> <span className="link-text">Tickets</span>
               </Link>
             </Tooltip>
@@ -83,7 +83,7 @@ export default function Sidebar({ isSidebarOpen = true }: { isSidebarOpen?: bool
               placement="right"
               arrow
             >
-              <Link className={getLinkClassName("/board")} href="/board">
+              <Link className={getLinkClassName(routes.kanban)} href={routes.kanban}>
                 <ViewKanbanOutlinedIcon /> <span className="link-text">Tablero</span>
               </Link>
             </Tooltip>
@@ -94,7 +94,7 @@ export default function Sidebar({ isSidebarOpen = true }: { isSidebarOpen?: bool
               placement="right"
               arrow
             >
-              <Link className={getLinkClassName("/users")} href="/users">
+              <Link className={getLinkClassName(routes.users)} href={routes.users}>
                 <GroupOutlinedIcon /> <span className="link-text">Usuarios</span>
               </Link>
             </Tooltip>
@@ -105,7 +105,7 @@ export default function Sidebar({ isSidebarOpen = true }: { isSidebarOpen?: bool
               placement="right"
               arrow
             >
-              <Link className={getLinkClassName("/settings")} href="/settings">
+              <Link className={getLinkClassName(routes.settings)} href={routes.settings}>
                 <BuildCircleOutlinedIcon /> <span className="link-text">Configuración</span>
               </Link>
             </Tooltip>

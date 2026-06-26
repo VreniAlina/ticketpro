@@ -1,5 +1,5 @@
 import ResumeCard from "@/components/ui/resumeCard/ResumeCard";
-import Table from "@/components/ui/Table/Table";
+import Table from "@/components/ui/table/Table";
 
 export default function DashboardHomePage() {
   return (

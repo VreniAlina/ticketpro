@@ -1,1 +1,17 @@
-.dashboard-container{background-color: #F8F9FD;}
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+
+  main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dashboard-content {
+    flex: 1 0 auto;
+    padding: $space-lg;
+  }
+}

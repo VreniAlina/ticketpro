@@ -1,21 +1,86 @@
-.sidebar{
-    background-color: $color-sidebar;
-    color: white;
-    width: 19vh;
-    height: calc(100vh - 3.0rem);
-    padding: $space-lg;
-    gap: $space-xl-2;
+.sidebar {
+  background-color: $color-sidebar;
+  color: $bg-base-1;
+  width: 15vw;
+  height: 100vh;
+  padding: $space-lg;
+  gap: $space-xl-2;
 
-    .logo{
-        width: 100%;
-        height: auto;
-    }
+  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
+
+  .logo {
+    width: 150px;
+    height: auto;
+    transition: width 0.3s ease;
+  }
 }
-.menu-options{
-    list-style-type: none;
-    padding: 0;
-    gap: 30px;
-    .link {
+.sidebar-open {
+  width: 260px;
+}
+
+.sidebar-closed {
+  width: 80px;
+  padding: 16px 8px;
+}
+
+.logo-collapsed {
+  width: 40px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  transition: padding 0.3s ease;
+}
+
+.link-text {
+  white-space: nowrap;
+  transition:
+    opacity 0.15s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-closed .link-text {
+  opacity: 0;
+  transform: translateX(-10px);
+  width: 0;
+  overflow: hidden;
+}
+
+.sidebar-closed .link {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.user-details {
+  transition: opacity 0.15s ease;
+}
+
+.sidebar-closed .user-details {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.sidebar-closed .user-left {
+  justify-content: center;
+  width: 100%;
+}
+
+.sidebar-closed .menu-options li {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-options {
+  list-style-type: none;
+  padding: 0;
+  gap: 30px;
+  .link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -24,23 +89,26 @@
 
     border-radius: 12px;
 
-    color: white;
+    color: $bg-base-1;
     text-decoration: none;
 
-    transition: all .3s ease;
-    }
+    transition:
+      background 0.25s,
+      padding 0.3s,
+      color 0.2s;
+  }
 
-    .link:hover {
-    background-color: rgba(59,130,246,.15);
-    }
+  .link:hover {
+    background-color: rgba(59, 130, 246, 0.15);
+  }
 
-    .active-link {
-    background-color: #3B82F6;
-    }
+  .active-link {
+    background-color: $color-primary;
+  }
 
-    .active-link svg {
-    color: white;
-    }
+  .active-link svg {
+    color: $bg-base-1;
+  }
 }
 .login-container {
   width: 100%;
@@ -52,56 +120,35 @@
   padding: 12px;
   border-radius: 12px;
   gap: 5px;
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
 
 .user-info:hover {
-  background-color: rgba(255,255,255,.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .arrow {
-  transition: transform .3s ease;
+  transition: transform 0.25s ease;
 }
 
 .rotate-arrow {
   transform: rotate(90deg);
 }
 
-.user-menu {
-  margin-top: 10px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  padding: 10px;
-
-  border-radius: 12px;
-
-  background-color: rgba(255,255,255,.05);
-}
-
-.user-menu p {
-  padding: 8px;
-  border-radius: 8px;
-
-  transition: background .3s ease;
-}
-
-.user-menu p:hover {
-  background-color: rgba(255,255,255,.08);
-}
-.user-info{
-  div{
-    gap: 10px;
-    .user-details{
+.user-info {
+  div {
+    gap: $space-sm-1;
+    .user-details {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: $space-xs;
 
-      .user-name{
-        font-weight: 600;
+      .user-name {
+        font-weight: $font-weight-bold;
       }
     }
   }
+}
+.sidebar-closed .menu-options {
+  align-items: center;
 }

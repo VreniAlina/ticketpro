@@ -1,0 +1,54 @@
+.filters{
+    margin: $space-lg;
+}
+.filter-group {
+  display: flex;
+  gap: $space-md;
+  margin-bottom: $space-lg;
+  justify-content: space-between;
+
+  [class^="filter-"]{
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    padding: $space-sm $space-md;
+    border: 1px solid $border-line;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    transition: background-color 150ms ease;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.04);
+    }
+
+    &.active {
+      background-color: $color-primary;
+      color: #fff;
+      border-color: $color-primary;
+
+      &:hover {
+        background-color: $color-primary-hover;
+      }
+    }
+  }
+}
+.search-tickets{
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    padding: $space-sm $space-md;
+    border: 1px solid $border-line;
+    border-radius: $border-radius-sm;
+
+    input{
+        outline: none;
+        border: none;
+        width: 200px;
+    }
+}
+.paginated {
+  display: flex;
+  justify-content: center;
+  gap: $space-md;
+  margin: $space-lg 0 $space-sm 0;
+}
